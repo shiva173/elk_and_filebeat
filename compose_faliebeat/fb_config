@@ -6,7 +6,28 @@ filebeat.inputs:
     - /var/log/mysq/*
     - /var/log/apt/*
 
-output.elasticsearch:
-  hosts: ["http://192.168.0.100:9200"]
-  username: "elastic"
-  password: "caiPhoi1"
+#output.elasticsearch:
+#  hosts: ["http://192.168.0.100:9200"]
+#  username: "change me"
+#  password: "change me"
+
+
+
+
+
+setup.kibana:
+  # Kibana Host
+  # Scheme and port can be left out and will be set to the default (http and 5601)
+  # In case you specify and additional path, the scheme is required: http://localhost:5601/path
+  # IPv6 addresses should always be defined as: https://[2001:db8::1]:5601
+  host: "192.168.0.111:5601"
+  username: "change me"
+  password: "change me"
+  # Kibana Space ID
+  # ID of the Kibana Space into which the dashboards should be loaded. By default,
+  # the Default Space will be used.
+  #space.id
+
+
+output.logstash:
+  hosts: ["192.168.0.111:5044"]

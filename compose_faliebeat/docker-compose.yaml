@@ -11,3 +11,5 @@ services:
       - ./fb_config:/usr/share/filebeat/filebeat.yml
       #Mount the hosts system log directory. This represents the logs of the VM hosting docker. Consumed by the filebeat system module.
       - /var/log/:/var/log/
+    ports:
+      - 5044:5044
