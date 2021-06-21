@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   filebeat:
-    container_name: filebeat
+    container_name: localhost
     hostname: filebeat
     user: root
     image: docker.elastic.co/beats/filebeat:7.12.0
@@ -11,5 +11,5 @@ services:
       - ./fb_config:/usr/share/filebeat/filebeat.yml
       #Mount the hosts system log directory. This represents the logs of the VM hosting docker. Consumed by the filebeat system module.
       - /var/log/:/var/log/
-    ports:
-      - 5044:5044
+#    ports:
+ #     - 5044:5044
